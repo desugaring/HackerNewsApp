@@ -1,0 +1,46 @@
+HackerNews App ReadMe
+
+How to run -
+
+    - simply build and run using any phone simulator - no credentials/cocoapods/anything necessary
+
+What the app is/does -
+
+    - shows a subset of what you'd see on https://news.ycombinator.com
+    - uses https://github.com/HackerNews/API for API access - no login/registration necessary
+
+    - displays 3 tabs - New Stories, Top Stories, Users
+    - lazily fetches new stories/top stories as you scroll
+    - has refresh
+    - has ability to add and save your favorite users (I like TheOtherHobbes :))
+    - clicking on a story/user goes to its url
+
+Basic Architecture -
+
+    - UI <- ViewModel <- DataProvider <- Model
+
+    - UI is written in SwiftUI and relies on view models
+    
+    - View Models have 3 key pieces
+        - data status (show different UI based on this)
+        - data
+        - ability to get data (using data provider)
+
+    - Data Providers have 2 key pieces
+        - ability to get data (using http requests)
+        - ability to cache data
+
+    - Models are just simple structs that can be json encoded/decoded
+    
+    
+Things I'd improve if I had more time -
+
+    - I'd do proper error handling
+    - I'd try to see how to de-duplicate the UI code in NewStoriesView/TopStoriesView
+    - I'd add some real sample data to MockHNDataProvider to make it useful in testing
+    - I'd add the comments section to stories - that's what's so great about HackerNews
+    
+Tests -
+
+    - Models are tested for ability to parse from json
+    - Data providers are tested for ability to get data via http requests (verify that the APIs are up, running and returning expected data)
