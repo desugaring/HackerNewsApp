@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class HNRowViewModel<M: HNModel>: ObservableObject
 {
     var model: M?
@@ -38,18 +39,13 @@ class HNRowViewModel<M: HNModel>: ObservableObject
                 do
                 {
                     let model: M = try await dataProvider.getItem(id: modelId)
-                    DispatchQueue.main.async
-                    {
-                        self.model = model
-                        self.status = .loaded
-                    }
+
+                    self.model = model
+                    self.status = .loaded
                 }
                 catch
                 {
-                    DispatchQueue.main.async
-                    {
-                        self.status = .failed
-                    }
+                    self.status = .failed
                 }
             }
         }

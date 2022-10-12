@@ -19,12 +19,7 @@ class BaseJsonDataProvider
     
     func fetchData<T: Codable>(url: URL) async throws -> T
     {
-        let (data, response) = try await session.data(from: url)
-        
-        if let res = response as? HTTPURLResponse
-        {
-            print(res.statusCode)
-        }
+        let (data, _) = try await session.data(from: url)
         
         let item = try jsonDecoder.decode(T.self, from: data)
         

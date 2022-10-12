@@ -21,8 +21,6 @@ class HNDataProvider: BaseJsonDataProvider, HNDataProviderInterface
         case is HNItem.Type:
             if let existingStory = stories.first(where: { String($0.item_id) == id })
             {
-                // for debugging
-//                print("existing")
                 return existingStory as? M
             }
             

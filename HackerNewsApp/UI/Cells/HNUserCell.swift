@@ -32,30 +32,33 @@ struct HNUserCell: View {
                 
             case .loaded:
                 
-                Group {
-                    Text(viewModel.model!.item_id)
-                        .multilineTextAlignment(.leading)
-                        .font(.body)
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                NavigationLink {
+                    let url = URL(string: "https://news.ycombinator.com/user?id=\(viewModel.model!.item_id)")!
+                    WebView(url: url)
+                        .navigationTitle(Text(viewModel.model!.item_id))
+                } label: {
+                    HStack() {
+                        Text(viewModel.model!.item_id)
+                            .foregroundColor(.black)
+                            .multilineTextAlignment(.leading)
+                            .font(.body)
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
 
-                    Text("\( viewModel.model!.karma) karma")
-                        .foregroundColor(Color.black)
-                        .font(.caption)
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                }
-                .opacity(itemOpacity)
-                .onAppear {
-                    let anim = Animation.easeIn(duration: 0.3)
-                    withAnimation(anim) {
-                        itemOpacity = 1
+                        Text("\( viewModel.model!.karma) karma")
+                            .foregroundColor(Color.black)
+                            .font(.caption)
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                    }
+                    .opacity(itemOpacity)
+                    .onAppear {
+                        let anim = Animation.easeIn(duration: 0.3)
+                        withAnimation(anim) {
+                            itemOpacity = 1
+                        }
                     }
                 }
-                .onTapGesture {
-                    if let url = URL(string: "https://news.ycombinator.com/user?id=\(viewModel.model!.item_id)")
-                    {
-                        openURL(url)
-                    }
-                }
+
+                
                 
             case .loading:
                 

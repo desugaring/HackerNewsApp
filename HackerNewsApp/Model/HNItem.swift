@@ -30,20 +30,6 @@ struct HNItem: HNModel
         case url
     }
     
-    static func testItem(title: String, id: Int) -> HNItem
-    {
-        let item = HNItem(item_id: id, author: "alex", created_at: Date(), title: title, url: "http://google.com")
-        
-        return item
-    }
-    
-    static func missingItem() -> HNItem
-    {
-        var item = HNItem(item_id: 1, author: nil, created_at: nil, title: nil, url: nil)
-        item.is_missing_item = true
-        
-        return item
-    }
 }
 
 

@@ -12,7 +12,6 @@
 		CC3E051628EF638D00601DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3E051528EF638D00601DD9 /* Assets.xcassets */; };
 		CC3E051928EF638D00601DD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3E051828EF638D00601DD9 /* Preview Assets.xcassets */; };
 		CC3E052128EF641700601DD9 /* HNItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E052028EF641700601DD9 /* HNItem.swift */; };
-		CC3E053128EF65A500601DD9 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E052228EF655E00601DD9 /* ModelTests.swift */; };
 		CC3E053328EF685900601DD9 /* HNUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E053228EF685900601DD9 /* HNUser.swift */; };
 		CC3E053928EF6A2000601DD9 /* MockHNDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E053828EF6A2000601DD9 /* MockHNDataProvider.swift */; };
 		CC3E053B28EF6A2B00601DD9 /* HNDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E053A28EF6A2B00601DD9 /* HNDataProvider.swift */; };
@@ -28,6 +27,9 @@
 		CC3E055428F3519200601DD9 /* README in Resources */ = {isa = PBXBuildFile; fileRef = CC3E055328F3519200601DD9 /* README */; };
 		CC3E055628F3581000601DD9 /* BaseJsonDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E055528F3581000601DD9 /* BaseJsonDataProvider.swift */; };
 		CC3E055828F3583000601DD9 /* DataProviderInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E055728F3583000601DD9 /* DataProviderInterfaces.swift */; };
+		CCB0E8B028F7022600B549D1 /* HNItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8AF28F7022600B549D1 /* HNItemTests.swift */; };
+		CCB0E8B228F7022E00B549D1 /* HNUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */; };
+		CCB0E8D128F73B9B00B549D1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8D028F73B9B00B549D1 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,6 @@
 		CC3E051528EF638D00601DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3E051828EF638D00601DD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC3E052028EF641700601DD9 /* HNItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNItem.swift; sourceTree = "<group>"; };
-		CC3E052228EF655E00601DD9 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		CC3E052828EF659E00601DD9 /* HackerNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3E053228EF685900601DD9 /* HNUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNUser.swift; sourceTree = "<group>"; };
 		CC3E053828EF6A2000601DD9 /* MockHNDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHNDataProvider.swift; sourceTree = "<group>"; };
@@ -64,6 +65,10 @@
 		CC3E055328F3519200601DD9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		CC3E055528F3581000601DD9 /* BaseJsonDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonDataProvider.swift; sourceTree = "<group>"; };
 		CC3E055728F3583000601DD9 /* DataProviderInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderInterfaces.swift; sourceTree = "<group>"; };
+		CCB0E8AF28F7022600B549D1 /* HNItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNItemTests.swift; sourceTree = "<group>"; };
+		CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNUserTests.swift; sourceTree = "<group>"; };
+		CCB0E8B328F7053800B549D1 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		CCB0E8D028F73B9B00B549D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3E055328F3519200601DD9 /* README */,
+				CCB0E8B328F7053800B549D1 /* TODO.md */,
 				CC3E051128EF638C00601DD9 /* HackerNewsAppApp.swift */,
 				CC3E051328EF638C00601DD9 /* ContentView.swift */,
 				CC3E051028EF638C00601DD9 /* HackerNewsApp */,
@@ -138,8 +144,9 @@
 		CC3E052928EF659E00601DD9 /* HackerNewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC3E052228EF655E00601DD9 /* ModelTests.swift */,
 				CC3E054F28F3446900601DD9 /* HNDataProviderTests.swift */,
+				CCB0E8AF28F7022600B549D1 /* HNItemTests.swift */,
+				CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */,
 			);
 			path = HackerNewsAppTests;
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 			children = (
 				CC3E055128F3457F00601DD9 /* Tabs */,
 				CC3E055228F3459200601DD9 /* Cells */,
+				CCB0E8D028F73B9B00B549D1 /* WebView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				CC3E053E28EF6F6A00601DD9 /* HNMainViewModel.swift in Sources */,
 				CC3E053B28EF6A2B00601DD9 /* HNDataProvider.swift in Sources */,
 				CC3E051228EF638C00601DD9 /* HackerNewsAppApp.swift in Sources */,
+				CCB0E8D128F73B9B00B549D1 /* WebView.swift in Sources */,
 				CC3E054E28F3441700601DD9 /* TopStoriesView.swift in Sources */,
 				CC3E054628F24A2D00601DD9 /* HNUserCell.swift in Sources */,
 				CC3E054828F252CA00601DD9 /* UsersView.swift in Sources */,
@@ -333,8 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB0E8B228F7022E00B549D1 /* HNUserTests.swift in Sources */,
 				CC3E055028F3446900601DD9 /* HNDataProviderTests.swift in Sources */,
-				CC3E053128EF65A500601DD9 /* ModelTests.swift in Sources */,
+				CCB0E8B028F7022600B549D1 /* HNItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

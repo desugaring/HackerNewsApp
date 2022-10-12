@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class HNMainViewModel: ObservableObject
 {
     @Published var newStoriesStatus: LoadableStatus = .loading
@@ -27,20 +28,16 @@ class HNMainViewModel: ObservableObject
     {
         guard newStoryIds.count == 0 else { return }
         
-        newStoriesStatus = .loading
+        self.newStoriesStatus = .loading
         do
         {
             let ids = try await dataProvider.loadNewStoryIds()
-            DispatchQueue.main.async {
-                self.newStoryIds = ids
-                self.newStoriesStatus = .loaded
-            }
+            self.newStoryIds = ids
+            self.newStoriesStatus = .loaded
         }
         catch
         {
-            DispatchQueue.main.async {
-                self.newStoriesStatus = .failed
-            }
+            self.newStoriesStatus = .failed
         }
     }
     
@@ -52,18 +49,12 @@ class HNMainViewModel: ObservableObject
         do
         {
             let ids = try await dataProvider.loadTopStoryIds()
-            DispatchQueue.main.async
-            {
-                self.topStoryIds = ids
-                self.topStoriesStatus = .loaded
-            }
+            self.topStoryIds = ids
+            self.topStoriesStatus = .loaded
         }
         catch
         {
-            DispatchQueue.main.async
-            {
                 self.topStoriesStatus = .failed
-            }
         }
     }
     
@@ -74,15 +65,12 @@ class HNMainViewModel: ObservableObject
         do
         {
             let _: HNUser = try await dataProvider.getItem(id: name)
-            DispatchQueue.main.async {
-                self.userIds.append(name)
-                UserDefaults.standard.set(self.userIds, forKey: "users")
-            }
+            self.userIds.append(name)
+            UserDefaults.standard.set(self.userIds, forKey: "users")
             return true
         }
         catch
         {
-            print("username likely doesn't exist")
             return false
         }
         

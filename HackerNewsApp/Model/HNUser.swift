@@ -21,10 +21,4 @@ struct HNUser: HNModel
         case karma
     }
     
-    static func testUser(id: String) -> HNUser
-    {
-        let user = HNUser(item_id: id, created_at: Date(), karma: 1)
-        
-        return user
-    }
 }

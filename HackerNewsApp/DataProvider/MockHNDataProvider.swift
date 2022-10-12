@@ -24,8 +24,8 @@ class MockHNDataProvider: HNDataProviderInterface
     }
     
 
-    @Published var story: HNItem = HNItem.testItem(title: "a", id: 1)
-    @Published var user: HNUser = HNUser.testUser(id: "a")
+    @Published var story: HNItem = HNItem(item_id: 123, author: "alex", created_at: Date(), title: "test_item", url: "http://google.com")
+    @Published var user: HNUser = HNUser(item_id: "TheOtherHobbes", created_at: Date(), karma: 1)
     
     func loadNewStoryIds() async throws -> [Int] {
         return [1,2]
