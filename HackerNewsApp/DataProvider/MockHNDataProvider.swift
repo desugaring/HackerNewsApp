@@ -7,8 +7,20 @@
 
 import Foundation
 
+/**
+ 
+ Mock Data provider
+ 
+ - mimicks a real data provider by implementing HNDataProviderInterface
+ - gives back the same static story and user regardless of provided id (getExistingItem, getItem)
+ - gives back the same static new story ids and top story ideas (loadNewStoryIds, loadTopStoryIds)
+  
+ */
 class MockHNDataProvider: HNDataProviderInterface
 {
+    @Published var story: HNItem = HNItem(item_id: 123, author: "alex", created_at: Date(), title: "test_item", url: "http://google.com")
+    @Published var user: HNUser = HNUser(item_id: "TheOtherHobbes", created_at: Date(), karma: 1)
+    
     func getExistingItem<I>(id: String) -> I? where I : HNModel
     {
         switch I.self
@@ -21,19 +33,6 @@ class MockHNDataProvider: HNDataProviderInterface
             
         default: fatalError()
         }
-    }
-    
-
-    @Published var story: HNItem = HNItem(item_id: 123, author: "alex", created_at: Date(), title: "test_item", url: "http://google.com")
-    @Published var user: HNUser = HNUser(item_id: "TheOtherHobbes", created_at: Date(), karma: 1)
-    
-    func loadNewStoryIds() async throws -> [Int] {
-        return [1,2]
-
-    }
-    
-    func loadTopStoryIds() async throws -> [Int] {
-        return [1,2]
     }
     
     func getItem<I>(id: String) async throws -> I where I : HNModel
@@ -49,5 +48,16 @@ class MockHNDataProvider: HNDataProviderInterface
         default: fatalError()
         }
     }
+    
+    func loadNewStoryIds() async throws -> [Int] {
+        return [1,2]
+
+    }
+    
+    func loadTopStoryIds() async throws -> [Int] {
+        return [1,2]
+    }
+    
+
     
 }

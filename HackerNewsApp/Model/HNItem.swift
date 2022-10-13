@@ -7,6 +7,13 @@
 
 import Foundation
 
+/**
+ 
+ HNModel is an empty protocol used to be able to pass HNUser or HNItem to a cell view model (HNRowViewModel)
+ 
+ HNItem is the model for a HackerNews Story that get displayed in New Stories and Top Stories tabs of the app
+ 
+ */
 protocol HNModel: Codable, Identifiable {}
 
 struct HNItem: HNModel

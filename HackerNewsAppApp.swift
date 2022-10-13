@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/**
+ 
+ SwiftUI App that uses official HackerNews API to showcase use of swiftui, async/await, generics, testing, lazy loading and clean design
+ 
+ */
 @main
 struct HackerNewsAppApp: App {
     var body: some Scene {

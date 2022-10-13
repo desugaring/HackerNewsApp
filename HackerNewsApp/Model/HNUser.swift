@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ 
+ HNUser is the model for a HackerNews User that get displayed in Users tabs of the app
+ 
+ */
 struct HNUser: HNModel
 {
     let id: UUID = UUID()

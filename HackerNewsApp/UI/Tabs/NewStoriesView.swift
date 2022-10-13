@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/**
+ 
+ New stories view with
+ - a loading spinner in loading state
+ - error message in case of an error
+ - a list of new HackerNews stories in once they've loaded
+ 
+ - clicking on a story navigates to a webview page with the clicked on story displayed
+ 
+ */
 struct NewStoriesView: View {
     
     @EnvironmentObject var viewModel: HNMainViewModel

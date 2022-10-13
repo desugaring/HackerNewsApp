@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/**
+ 
+ Top stories view with
+ - a loading spinner in loading state
+ - error message in case of an error
+ - a list of top HackerNews stories in once they've loaded
+ 
+ - clicking on a story navigates to a webview page with the clicked on story displayed
+ 
+ */
 struct TopStoriesView: View {
     
     @EnvironmentObject var viewModel: HNMainViewModel

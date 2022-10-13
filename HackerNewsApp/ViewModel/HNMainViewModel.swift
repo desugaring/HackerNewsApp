@@ -7,6 +7,28 @@
 
 import Foundation
 
+/**
+ 
+ Main View Model that drives UI for all 3 tabs - new stories, top stories, users
+
+ - uses data provider to fetch data
+ 
+ - has data:
+    - top story ids
+    - new story ids
+    - user ids
+ 
+ - has data statuses for:
+    - new stories
+    - top stories
+ 
+ - has async methods to fetch
+    - top story ids
+    - new story ids
+ 
+ - has add user method to add and user id, fetch user and store it in User Defaults for when we close and re-open the app
+ 
+ */
 @MainActor
 class HNMainViewModel: ObservableObject
 {

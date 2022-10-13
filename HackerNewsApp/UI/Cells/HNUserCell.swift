@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+/**
+ 
+ User list cell view with
+
+ - a loading spinner in loading state
+ - error message in case of an error
+ - user id (name) and karma once fully loaded
+ 
+ - clicking on this cell when loaded navigates to a webview page with the user displayed
+ 
+ */
 struct HNUserCell: View {
     
     @ObservedObject var viewModel: HNRowViewModel<HNUser>

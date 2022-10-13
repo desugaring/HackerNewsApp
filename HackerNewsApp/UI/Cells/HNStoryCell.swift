@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+/**
+ 
+ Story list cell view with
+
+ - a loading spinner in loading state
+ - error message in case of an error
+ - story title, url and author once the story has loaded
+ 
+ - clicking on this cell when loaded navigates to a webview page with the story displayed
+ 
+ */
 struct HNStoryCell: View {
     
     @ObservedObject var viewModel: HNRowViewModel<HNItem>

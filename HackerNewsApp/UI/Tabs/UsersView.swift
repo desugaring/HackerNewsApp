@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+/**
+ 
+ Users view with
+ - a textfield and button to add new users
+ - a vertical list of users, saved/reloaded in between app launches
+  
+ */
 struct UsersView: View {
     
     @EnvironmentObject var viewModel: HNMainViewModel

@@ -10,6 +10,13 @@ import SwiftUI
 import SwiftUI
 import WebKit
 
+/**
+ 
+ Webview to display story and user webpages
+
+ - has a strange iOS 16/Xcode 14 error pop up when calloing uiView.load - it is explained in detail below
+ 
+ */
 struct WebView: UIViewRepresentable {
     
     let url: URL

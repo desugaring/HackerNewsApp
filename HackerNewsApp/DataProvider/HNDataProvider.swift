@@ -7,8 +7,21 @@
 
 import Foundation
 
+/**
+ 
+ Data provider
+ 
+ - fetches via http (loadNewStoryIds, loadTopStoryIds)
+    - new story ids
+    - top story ids
+ 
+ - fetches via http and caches (getItem)
+    - story
+    - user
 
-
+- gives back cached story or user instead of fetching if available (getExistingItem)
+  
+ */
 class HNDataProvider: BaseJsonDataProvider, HNDataProviderInterface
 {
     @Published var stories: [HNItem] = []

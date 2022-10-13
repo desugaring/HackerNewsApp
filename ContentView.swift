@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+/**
+ 
+ Main app view that has 3 tabs
+    - New Stories
+    - Top Stories
+    - Users
+ 
+ */
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: HNMainViewModel
