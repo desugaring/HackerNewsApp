@@ -37,7 +37,7 @@ Things I'd improve if I had more time -
 
     - I'd do proper error handling
     - I'd try to see how to de-duplicate the UI code in NewStoriesView/TopStoriesView
-    - I'd add some real sample data to MockHNDataProvider to make it useful in testing
+    - I'd add some real sample data to HNMockDataProvider to make it useful in testing
     - I'd add the comments section to stories - that's what's so great about HackerNews
     
 Tests -

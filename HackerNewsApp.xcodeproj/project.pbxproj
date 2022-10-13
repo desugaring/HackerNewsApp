@@ -30,6 +30,7 @@
 		CCB0E8B028F7022600B549D1 /* HNItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8AF28F7022600B549D1 /* HNItemTests.swift */; };
 		CCB0E8B228F7022E00B549D1 /* HNUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */; };
 		CCB0E8D128F73B9B00B549D1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8D028F73B9B00B549D1 /* WebView.swift */; };
+		CCB0E8D328F87BF300B549D1 /* HNMockProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB0E8D228F87BF300B549D1 /* HNMockProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNUserTests.swift; sourceTree = "<group>"; };
 		CCB0E8B328F7053800B549D1 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		CCB0E8D028F73B9B00B549D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CCB0E8D228F87BF300B549D1 /* HNMockProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNMockProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3E054F28F3446900601DD9 /* HNDataProviderTests.swift */,
+				CCB0E8D228F87BF300B549D1 /* HNMockProviderTests.swift */,
 				CCB0E8AF28F7022600B549D1 /* HNItemTests.swift */,
 				CCB0E8B128F7022E00B549D1 /* HNUserTests.swift */,
 			);
@@ -344,6 +347,7 @@
 			files = (
 				CCB0E8B228F7022E00B549D1 /* HNUserTests.swift in Sources */,
 				CC3E055028F3446900601DD9 /* HNDataProviderTests.swift in Sources */,
+				CCB0E8D328F87BF300B549D1 /* HNMockProviderTests.swift in Sources */,
 				CCB0E8B028F7022600B549D1 /* HNItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

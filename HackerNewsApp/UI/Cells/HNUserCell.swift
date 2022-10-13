@@ -91,6 +91,6 @@ struct HNUserCell: View {
 
 struct HNUserCell_Previews: PreviewProvider {
     static var previews: some View {
-        HNUserCell(viewModel: HNRowViewModel(modelId: "TheOtherHobbes", dataProvider: MockHNDataProvider()))
+        HNUserCell(viewModel: HNRowViewModel(modelId: "TheOtherHobbes", dataProvider: HNMockDataProvider()))
     }
 }

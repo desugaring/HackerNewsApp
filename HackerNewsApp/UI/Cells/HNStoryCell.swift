@@ -93,6 +93,6 @@ struct HNStoryCell: View {
 
 struct HNStoryCell_Previews: PreviewProvider {
     static var previews: some View {
-        HNStoryCell(viewModel: HNRowViewModel(modelId: "1", dataProvider: MockHNDataProvider()))
+        HNStoryCell(viewModel: HNRowViewModel(modelId: "1", dataProvider: HNMockDataProvider()))
     }
 }
