@@ -13,7 +13,8 @@ What the app is/does -
     - lazily fetches new stories/top stories as you scroll
     - has refresh
     - has ability to add and save your favorite users (I like TheOtherHobbes :))
-    - clicking on a story/user goes to its url
+    - clicking on a story goes to its url in Safari
+    - clicking on a user goes does a navigation push to a webview page with a back button (to satisfy having a navigation view requirement)
 
 Basic Architecture -
 
@@ -43,4 +44,5 @@ Things I'd improve if I had more time -
 Tests -
 
     - Models are tested for ability to parse from json
-    - Data providers are tested for ability to get data via http requests (verify that the APIs are up, running and returning expected data)
+    - Data providers are tested for ability to get data
+    
